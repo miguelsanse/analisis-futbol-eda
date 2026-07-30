@@ -12,20 +12,18 @@ Técnicas empleadas: limpieza y transformación de datos con pandas, unión de f
 
 ## Estructura del proyecto
 
-```
 proyecto_final/
 ├── data/
-│   ├── raw/                      # Datos en bruto originales
-│   │   ├── Matches.csv           # Partidos (Football-Data.co.uk)
-│   │   └── EloRatings.csv        # Puntuaciones Elo (ClubElo)
-│   └── processed/
-│       └── matches_elo_final.csv # Dataset final limpio y unido (93.570 x 42)
+│ ├── raw/ # Datos en bruto originales
+│ │ ├── Matches.zip # Partidos comprimidos (descomprimir antes de usar)
+│ │ └── EloRatings.csv # Puntuaciones Elo (ClubElo)
+│ └── processed/
+│ └── matches_elo_final.csv # Dataset final limpio y unido (93.570 x 42)
 ├── notebooks/
-│   └── eda_futbol.ipynb          # Notebook con todo el análisis
+│ └── eda_futbol.ipynb # Notebook con todo el análisis
 ├── dashboard/
-│   └── dashboard_futbol.pbix     # Dashboard interactivo de Power BI
-└── README.md                     # Este documento
-```
+│ └── dashboard_futbol.pbix # Dashboard interactivo de Power BI
+└── README.md # Este documento
 
 ## Instalación y requisitos
 
@@ -39,7 +37,11 @@ El análisis está desarrollado en Python 3.12 y requiere las siguientes librer�
 
 Instalación de las dependencias:
 
+pip install pandas numpy scipy matplotlib seaborn
+
 El notebook `eda_futbol.ipynb` puede ejecutarse de principio a fin con la opción "Ejecutar todo" (Run All). Las rutas a los datos son relativas, por lo que debe mantenerse la estructura de carpetas indicada.
+
+Nota: el archivo de partidos se distribuye comprimido como `Matches.zip` debido a su tamaño. Descomprímelo dentro de la carpeta `data/raw/` (obteniendo `Matches.csv`) antes de ejecutar el notebook.
 
 El dashboard requiere Power BI Desktop para abrir el archivo `dashboard_futbol.pbix`.
 
